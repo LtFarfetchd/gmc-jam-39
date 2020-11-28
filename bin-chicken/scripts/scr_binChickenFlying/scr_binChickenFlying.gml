@@ -20,7 +20,7 @@ function scr_binChickenFlying() {
 	var xChange = hSpeed / sps;
 	var yChange = vSpeed / sps;
 	
-	// bounce off walls
+	// bounce off walls - need to revise this code
 	// TODO: kill at a particular hSpeed
 	if (instance_place(x + xChange, y, obj_wall)) {
 		while (!instance_place(x + sign(xChange), y, obj_wall)) {
@@ -45,6 +45,7 @@ function scr_binChickenFlying() {
 		}
 	}
 	
+	// TODO: horizontal bouncing off borders and transition handling
 	if (x - sprite_width / 2 + xChange < 0) {
 		xChange = - (x - sprite_width / 2);	
 	}
@@ -52,6 +53,7 @@ function scr_binChickenFlying() {
 		xChange = room_width - (x + sprite_width / 2);	
 	}
 	
+	// vertical bouncing off borders and transition handling
 	if (y - sprite_height / 2 + yChange < 0) {
 		while (y - sprite_height / 2 > 0) {
 			y--;	
@@ -81,7 +83,7 @@ function scr_binChickenFlying() {
 		}
 	}
 	
+	// final movement
 	x += xChange;
 	y += yChange;
-	
 }
