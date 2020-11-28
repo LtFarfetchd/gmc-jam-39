@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_binChickenStand",
+    "path": "sprites/spr_binChickenStand/spr_binChickenStand.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -19,6 +22,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_binChicken","path":"objects/obj_binChicken/obj_binChicken.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_binChicken","path":"objects/obj_binChicken/obj_binChicken.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
