@@ -22,10 +22,11 @@ STATE_SCRIPTS = scr_build_map(
 );
 
 state = states.standing;
+previousState = states.standing;
 nextState = undefined;
 hSpeed = 0;
 vSpeed = 0;
 timeSinceLastFlap = 0; // in seconds
-flapCooldownTime = 1; // in seconds
-flapSpeedBoost = -20; // in pixels per second
-GRAVITY = 3; // in pixels per second
+flapCooldownTime = 0.3; // in seconds
+flapSpeedBoost = -500; // in pixels per second
+GRAVITY = 15; // in pixels per second

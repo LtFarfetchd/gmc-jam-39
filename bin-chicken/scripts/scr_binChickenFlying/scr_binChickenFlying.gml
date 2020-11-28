@@ -1,11 +1,19 @@
 
 function scr_binChickenFlying() {
+	var sps = game_get_speed(gamespeed_fps);
+	
+	if (previousState != states.flying) {
+		// perform initial flap
+		vSpeed = flapSpeedBoost;
+	}
+	
+	// update step-relevant variables
 	vSpeed += GRAVITY;
-	timeSinceLastFlap += 1 / fps_real;
+	timeSinceLastFlap += 1 / sps;
 	
 	if (keyboard_check_pressed(vk_space) && 
 		timeSinceLastFlap >= flapCooldownTime) {
-		vSpeed -= flapSpeedBoost;	
+		vSpeed += flapSpeedBoost;	
 		timeSinceLastFlap = 0;
 	}
 	
@@ -26,11 +34,12 @@ function scr_binChickenFlying() {
 		}
 		else {
 			vSpeed = 0;
+			timeSinceLastFlap = 0;
 			nextState = states.standing;
 		}
 	}
 	
-	x += hSpeed / fps_real;
-	y += vSpeed / fps_real;
+	x += hSpeed / sps;
+	y += vSpeed / sps;
 	
 }
