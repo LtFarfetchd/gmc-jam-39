@@ -4,7 +4,7 @@ function scr_binChickenFlying() {
 	
 	if (previousState != states.flying) {
 		// perform initial flap
-		vSpeed = flapSpeedBoost;
+		vSpeed = FLAP_SPEED_BOOST;
 	}
 	
 	// update step-relevant variables
@@ -12,8 +12,8 @@ function scr_binChickenFlying() {
 	timeSinceLastFlap += 1 / sps;
 	
 	if (keyboard_check_pressed(vk_space) && 
-		timeSinceLastFlap >= flapCooldownTime) {
-		vSpeed += flapSpeedBoost;	
+		timeSinceLastFlap >= FLAP_COOLDOWN_TIME) {
+		vSpeed += FLAP_SPEED_BOOST;	
 		timeSinceLastFlap = 0;
 	}
 	
