@@ -1,8 +1,10 @@
 {
   "resources": [
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":2,},
+    {"id":{"name":"scr_binChickenFlying","path":"scripts/scr_binChickenFlying/scr_binChickenFlying.yy",},"order":2,},
     {"id":{"name":"spr_binVariationTwo","path":"sprites/spr_binVariationTwo/spr_binVariationTwo.yy",},"order":6,},
     {"id":{"name":"spr_binChickenEnergyIcon","path":"sprites/spr_binChickenEnergyIcon/spr_binChickenEnergyIcon.yy",},"order":11,},
+    {"id":{"name":"scr_binChickenDead","path":"scripts/scr_binChickenDead/scr_binChickenDead.yy",},"order":0,},
     {"id":{"name":"Object12","path":"objects/Object12/Object12.yy",},"order":11,},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},"order":2,},
     {"id":{"name":"spr_trashParticle","path":"sprites/spr_trashParticle/spr_trashParticle.yy",},"order":8,},
@@ -34,9 +36,12 @@
     {"id":{"name":"spr_cloud","path":"sprites/spr_cloud/spr_cloud.yy",},"order":12,},
     {"id":{"name":"spr_binChickenEat","path":"sprites/spr_binChickenEat/spr_binChickenEat.yy",},"order":3,},
     {"id":{"name":"spr_binChickenFly","path":"sprites/spr_binChickenFly/spr_binChickenFly.yy",},"order":1,},
+    {"id":{"name":"scr_build_map","path":"scripts/scr_build_map/scr_build_map.yy",},"order":0,},
+    {"id":{"name":"scr_binChickenStanding","path":"scripts/scr_binChickenStanding/scr_binChickenStanding.yy",},"order":3,},
     {"id":{"name":"spr_binChickenEnergyBorder","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},"order":10,},
     {"id":{"name":"Object10","path":"objects/Object10/Object10.yy",},"order":9,},
     {"id":{"name":"obj_building","path":"objects/obj_building/obj_building.yy",},"order":7,},
+    {"id":{"name":"scr_binChickenEating","path":"scripts/scr_binChickenEating/scr_binChickenEating.yy",},"order":1,},
     {"id":{"name":"rm_noah","path":"rooms/rm_noah/rm_noah.yy",},"order":0,},
   ],
   "Options": [
@@ -57,8 +62,8 @@
     "children": [],
   },
   "RoomOrder": [
-    {"name":"rm_noah","path":"rooms/rm_noah/rm_noah.yy",},
     {"name":"rm_adam","path":"rooms/rm_adam/rm_adam.yy",},
+    {"name":"rm_noah","path":"rooms/rm_noah/rm_noah.yy",},
     {"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},
   ],
   "Folders": [
@@ -76,6 +81,8 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":13,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/binChickenStates.yy","order":4,"resourceVersion":"1.0","name":"binChickenStates","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/util.yy","order":5,"resourceVersion":"1.0","name":"util","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
