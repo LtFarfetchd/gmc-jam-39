@@ -1,6 +1,6 @@
 
 function scr_binChickenFlying() {
-	var sps = game_get_speed(gamespeed_fps);
+	var sps = game_get_speed(gamespeed_fps); // steps per second
 	
 	if (previousState != states.flying) {
 		// perform initial flap
@@ -17,29 +17,39 @@ function scr_binChickenFlying() {
 		timeSinceLastFlap = 0;
 	}
 	
+	var xChange = hSpeed / sps;
+	var yChange = vSpeed / sps;
+	
 	// bounce off walls
 	// TODO: kill at a particular hSpeed
-	if (instance_place(x + hSpeed, y, obj_wall)) {
-		while (!instance_place(x + sign(hSpeed), y, obj_wall)) {
-			x += sign(hSpeed);
+	if (instance_place(x + xChange, y, obj_wall)) {
+		while (!instance_place(x + sign(xChange), y, obj_wall)) {
+			x += sign(xChange);
 		}
 		hSpeed = -hSpeed;	
+		xChange = -xChange;
 	}
-	if (instance_place(x, y + vSpeed, obj_wall)){
-		while (instance_place(x, y + sign(vSpeed), obj_wall)) {
-			y += sign(vSpeed);
+	if (instance_place(x, y + yChange, obj_wall)){
+		while (instance_place(x, y + sign(yChange), obj_wall)) {
+			y += sign(yChange);
 		}
-		if (vSpeed < 0) { // if hitting the roof
+		if (yChange < 0) { // if hitting the roof
 			vSpeed = -vSpeed;
+			yChange = -yChange;
 		}
 		else {
 			vSpeed = 0;
+			yChange = 0;
 			timeSinceLastFlap = 0;
 			nextState = states.standing;
 		}
 	}
 	
-	x += hSpeed / sps;
-	y += vSpeed / sps;
+	if (x + xChange < 0) {
+		xChange = -x;	
+	}
+	
+	x += xChange;
+	y += yChange;
 	
 }
