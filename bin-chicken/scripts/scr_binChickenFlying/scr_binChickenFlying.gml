@@ -2,7 +2,7 @@
 function scr_binChickenFlying() {
 	var sps = game_get_speed(gamespeed_fps); // steps per second
 	
-	if (previousState != states.flying) {
+	if (previousState != states.flying && state != states.dead) {
 		// perform initial flap
 		vSpeed = FLAP_SPEED_BOOST;
 	}
@@ -11,8 +11,10 @@ function scr_binChickenFlying() {
 	vSpeed += GRAVITY;
 	timeSinceLastFlap += 1 / sps;
 	
-	if (keyboard_check_pressed(vk_space) && 
-		timeSinceLastFlap >= FLAP_COOLDOWN_TIME) {
+	if (state != states.dead 
+		&& keyboard_check_pressed(vk_space)
+		&& timeSinceLastFlap >= FLAP_COOLDOWN_TIME) 
+	{
 		vSpeed += FLAP_SPEED_BOOST;	
 		timeSinceLastFlap = 0;
 	}
@@ -41,7 +43,7 @@ function scr_binChickenFlying() {
 			vSpeed = 0;
 			yChange = 0;
 			timeSinceLastFlap = 0;
-			nextState = states.standing;
+			nextState = (state == states.dead) ? states.dead : states.standing;
 		}
 	}
 	
@@ -73,7 +75,7 @@ function scr_binChickenFlying() {
 			vSpeed = 0;
 			yChange = 0;
 			timeSinceLastFlap = 0;
-			nextState = states.standing;
+			nextState = (state == states.dead) ? states.dead : states.standing;
 		}
 		else { // bounce and die
 			vSpeed = yChange;
