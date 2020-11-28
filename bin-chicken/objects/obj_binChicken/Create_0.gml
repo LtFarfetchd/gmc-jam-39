@@ -30,3 +30,4 @@ timeSinceLastFlap = 0; // in seconds
 FLAP_COOLDOWN_TIME = 0.3; // in seconds
 FLAP_SPEED_BOOST = -500; // in pixels per second
 GRAVITY = 15; // in pixels per second
+DEATH_SPEED = 1000; // in pixels per second

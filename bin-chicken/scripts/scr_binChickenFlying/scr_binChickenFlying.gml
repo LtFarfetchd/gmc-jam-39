@@ -45,8 +45,40 @@ function scr_binChickenFlying() {
 		}
 	}
 	
-	if (x + xChange < 0) {
-		xChange = -x;	
+	if (x - sprite_width / 2 + xChange < 0) {
+		xChange = - (x - sprite_width / 2);	
+	}
+	else if (x + sprite_width / 2 + xChange > room_width) {
+		xChange = room_width - (x + sprite_width / 2);	
+	}
+	
+	if (y - sprite_height / 2 + yChange < 0) {
+		while (y - sprite_height / 2 > 0) {
+			y--;	
+		}
+		vSpeed = -vSpeed;
+		yChange = -yChange;	
+		if (abs(vSpeed) > DEATH_SPEED) {
+			timeSinceLastFlap = 0;
+			nextState = states.dead;
+		}
+	}
+	else if (y + sprite_height / 2 + yChange > room_height) {
+		if (abs(vSpeed) < DEATH_SPEED) { // transition to standing
+			while (y + sprite_height / 2 < room_height) {
+				y++;	
+			}
+			vSpeed = 0;
+			yChange = 0;
+			timeSinceLastFlap = 0;
+			nextState = states.standing;
+		}
+		else { // bounce and die
+			vSpeed = yChange;
+			yChange = -yChange;
+			timeSinceLastFlap = 0;
+			nextState = states.dead;
+		}
 	}
 	
 	x += xChange;
