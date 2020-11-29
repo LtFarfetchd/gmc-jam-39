@@ -46,3 +46,7 @@ energy = global.STARTING_ENERGY;
 binInside = noone; // current bin the bicken is in
 consumptionRate = 10; // energy gain per second
 trashSpawnTimer = 0;
+
+// handle music
+audio_play_sound(mus_Atmos_LOOP, 99, true);
+audio_play_sound(mus_MOTBC_LOOP, 100, true);

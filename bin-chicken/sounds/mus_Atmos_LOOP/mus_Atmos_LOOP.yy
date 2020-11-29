@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfx_Atmos_LOOP.wav",
+  "soundFile": "mus_Atmos_LOOP.wav",
   "duration": 172.005,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sfx_Atmos_LOOP",
+  "name": "mus_Atmos_LOOP",
   "tags": [],
   "resourceType": "GMSound",
 }

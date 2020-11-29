@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "MOTBC_LOOP.wav",
+  "soundFile": "mus_MOTBC_LOOP.wav",
   "duration": 122.186813,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "MOTBC_LOOP",
+  "name": "mus_MOTBC_LOOP",
   "tags": [],
   "resourceType": "GMSound",
 }
