@@ -101,9 +101,17 @@ function scr_binChickenFlying() {
 		}
 	}
 	
+	// handling death by energy depletion
+	if (energy <= 0) {
+		timeSinceLastFlap = 0;
+		nextState = states.dead;
+	}
+	
 	// final movement
 	x += xChange;
 	y += yChange;
-	var newDirection = facingDirection + rotationChange;
-	facingDirection = newDirection < 0 ? newDirection + 360 : newDirection % 360;
+	if (state != states.dead) {
+		var newDirection = facingDirection + rotationChange;
+		facingDirection = newDirection < 0 ? newDirection + 360 : newDirection % 360;
+	}
 }
