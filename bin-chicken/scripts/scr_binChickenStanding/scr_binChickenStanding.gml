@@ -21,6 +21,10 @@ function scr_binChickenStanding(){
 		&& bin.bbox_top < y - sprite_height / 2
 		&& bin.bbox_bottom > y + sprite_height / 2) 
 	{
+		audio_play_sound(
+			scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.binHit))
+			, SFX_PRIORITY, false
+		);
 		nextState = states.eating;	
 		binInside = bin;
 	}

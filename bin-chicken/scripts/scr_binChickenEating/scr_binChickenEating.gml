@@ -19,6 +19,10 @@ function scr_binChickenEating(){
 	
 	// handle state transition testing
 	if (energyChange <= 0) {
+		audio_play_sound(
+			scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.burp))
+			, SFX_PRIORITY, false
+		);
 		nextState = states.standing;
 		binInside = noone;
 		trashSpawnTimer = 0;
