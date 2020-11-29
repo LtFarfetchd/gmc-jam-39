@@ -37,9 +37,16 @@ function scr_binChickenFlying() {
 			x += sign(xChange);
 			y += sign(yChange);
 		}
+		// bounce
 		hSpeed = -hSpeed / 2;
 		xChange = -xChange / 2;
-		timeSinceLastFlap = -FLAP_COOLDOWN_TIME; // disable flapping after bounce
+		if (abs(hSpeed) > DEATH_SPEED) { // die
+			timeSinceLastFlap = 0;
+			nextState = states.dead;
+		}
+		else if (abs(hSpeed) > STUN_SPEED) { // stun
+			timeSinceLastFlap = STUN_FLAP_LAG_VALUE;	
+		}
 	}
 	
 	// vertical bouncing off objects and transition handling
@@ -49,19 +56,23 @@ function scr_binChickenFlying() {
 				x += sign(xChange);
 				y--;
 			}
+			// bounce
 			vSpeed = -vSpeed / 2;
 			yChange = -yChange / 2;	
-			if (abs(vSpeed) > DEATH_SPEED) {
+			if (abs(vSpeed) > DEATH_SPEED) { // die
 				timeSinceLastFlap = 0;
 				nextState = states.dead;
 			}
+			else if (abs(vSpeed) > STUN_SPEED) { // stun
+				timeSinceLastFlap = STUN_FLAP_LAG_VALUE;	
+			}
 		}
 		else if (yChange > 0) {
-			if (abs(vSpeed) < DEATH_SPEED) { // transition to standing
-				while (!place_meeting(x, y, obj_wall)) {
-					x += sign(xChange);
-					y++;	
-				}
+			while (!place_meeting(x, y, obj_wall)) {
+				x += sign(xChange);
+				y++;	
+			}	
+			if (abs(vSpeed) < STUN_SPEED) { // transition to standing TODO: test angle in this condition
 				vSpeed = 0;
 				yChange = 0;
 				hSpeed = 0;
@@ -69,11 +80,17 @@ function scr_binChickenFlying() {
 				timeSinceLastFlap = 0;
 				nextState = (state == states.dead) ? states.dead : states.standing;
 			}
-			else { // bounce and die
-				vSpeed = yChange;
-				yChange = -yChange;
-				timeSinceLastFlap = 0;
-				nextState = states.dead;
+			else {
+				// bounce
+				vSpeed = -vSpeed / 2;
+				yChange = -yChange / 2;
+				if (abs(vSpeed) < DEATH_SPEED) { // stun
+					timeSinceLastFlap = STUN_FLAP_LAG_VALUE;
+				}
+				else { // die
+					timeSinceLastFlap = 0;
+					nextState = states.dead;
+				}
 			}
 		}
 	}
