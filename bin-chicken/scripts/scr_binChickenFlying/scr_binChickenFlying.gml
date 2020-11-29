@@ -18,8 +18,8 @@ function scr_binChickenFlying() {
 		{
 			var trajectory = (facingDirection + 90) % 360;
 
-			vSpeed += dsin(trajectory) * FLAP_SPEED_BOOST;	
-			hSpeed += dcos(trajectory) * FLAP_SPEED_BOOST;
+			vSpeed += dsin(trajectory) * FLAP_SPEED_BOOST;
+			hSpeed += dcos(trajectory) * abs(FLAP_SPEED_BOOST);
 			timeSinceLastFlap = 0;
 		}
 		
@@ -30,15 +30,22 @@ function scr_binChickenFlying() {
 	var xChange = hSpeed / sps;
 	var yChange = vSpeed / sps;
 	
-	// TODO: genuine death computation and making transition to standing conditional upon angle
 	// horizontal bouncing off borders and transition handling
 	if (place_meeting(x + xChange, y, obj_wall)) {
 		while (!place_meeting(x + sign(xChange), y, obj_wall)) {
 			x += sign(xChange);
 			y += sign(yChange);
 		}
+		// bounce
 		hSpeed = -hSpeed / 2;
 		xChange = -xChange / 2;
+		if (abs(hSpeed) >= DEATH_SPEED) { // die
+			timeSinceLastFlap = 0;
+			nextState = states.dead;
+		}
+		else if (abs(hSpeed) >= STUN_SPEED) { // stun
+			timeSinceLastFlap = STUN_FLAP_LAG_VALUE;	
+		}
 	}
 	
 	// vertical bouncing off objects and transition handling
@@ -48,19 +55,26 @@ function scr_binChickenFlying() {
 				x += sign(xChange);
 				y--;
 			}
+			// bounce
 			vSpeed = -vSpeed / 2;
 			yChange = -yChange / 2;	
-			if (abs(vSpeed) > DEATH_SPEED) {
+			if (abs(vSpeed) >= DEATH_SPEED) { // die
 				timeSinceLastFlap = 0;
 				nextState = states.dead;
 			}
+			else if (abs(vSpeed) >= STUN_SPEED) { // stun
+				timeSinceLastFlap = STUN_FLAP_LAG_VALUE;	
+			}
 		}
 		else if (yChange > 0) {
-			if (abs(vSpeed) < DEATH_SPEED) { // transition to standing
-				while (!place_meeting(x, y, obj_wall)) {
-					x += sign(xChange);
-					y++;	
-				}
+			while (!place_meeting(x, y, obj_wall)) {
+				x += sign(xChange);
+				y++;	
+			}	
+			if (abs(vSpeed) < STUN_SPEED
+				&& (facingDirection < LANDING_ANGLE_MARGIN
+				|| facingDirection > 360 - LANDING_ANGLE_MARGIN)) 
+			{ // transition to standing 
 				vSpeed = 0;
 				yChange = 0;
 				hSpeed = 0;
@@ -68,11 +82,17 @@ function scr_binChickenFlying() {
 				timeSinceLastFlap = 0;
 				nextState = (state == states.dead) ? states.dead : states.standing;
 			}
-			else { // bounce and die
-				vSpeed = yChange;
-				yChange = -yChange;
-				timeSinceLastFlap = 0;
-				nextState = states.dead;
+			else {
+				// bounce
+				vSpeed = -vSpeed / 2;
+				yChange = -yChange / 2;
+				if (abs(vSpeed) >= DEATH_SPEED) { // die
+					timeSinceLastFlap = 0;
+					nextState = states.dead;
+				}
+				else if (abs(vSpeed) >= STUN_SPEED) { // stun
+					timeSinceLastFlap = STUN_FLAP_LAG_VALUE;
+				}
 			}
 		}
 	}
@@ -80,5 +100,6 @@ function scr_binChickenFlying() {
 	// final movement
 	x += xChange;
 	y += yChange;
-	facingDirection = (facingDirection + rotationChange) % 360;
+	var newDirection = facingDirection + rotationChange;
+	facingDirection = newDirection < 0 ? newDirection + 360 : newDirection % 360;
 }
