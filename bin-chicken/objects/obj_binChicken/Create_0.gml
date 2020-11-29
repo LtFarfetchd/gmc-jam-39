@@ -5,6 +5,16 @@ enum states {
 	dead
 }
 
+enum sfxTypes {
+	honk,
+	call,
+	scream,
+	flap,
+	hit,
+	binHit,
+	burp
+}
+
 // initialising variables
 
 STATE_SPRITES = scr_build_map(
@@ -19,6 +29,16 @@ STATE_SCRIPTS = scr_build_map(
 	, states.eating, scr_binChickenEating
 	, states.dead, scr_binChickenDead
 	, states.flying, scr_binChickenFlying
+);
+
+SOUND_EFFECTS = scr_build_map(
+	sfxTypes.binHit, scr_array(sfx_BinHit_1, sfx_BinHit_2)
+	, sfxTypes.burp, scr_array(sfx_Burp_1, sfx_Burp_2, sfx_Burp_3)
+	, sfxTypes.call, scr_array(sfx_IbisCall_1, sfx_IbisCall_2, sfx_IbisCall_3)
+	, sfxTypes.flap, scr_array(sfx_Flap_1, sfx_Flap_2, sfx_Flap_3)
+	, sfxTypes.hit, scr_array(sfx_Hit_1, sfx_Hit_2, sfx_Hit_3)
+	, sfxTypes.honk, scr_array(sfx_IbisHonk_1, sfx_IbisHonk_2, sfx_IbisHonk_3)
+	, sfxTypes.scream, scr_array(sfx_IbisScream_1, sfx_IbisScream_2, sfx_IbisScream_3)
 );
 
 global.STARTING_ENERGY = 500;
