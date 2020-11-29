@@ -8,6 +8,7 @@ function scr_binChickenStanding(){
 	var bin = instance_place(x, y, obj_bin);
 	if (energy < global.STARTING_ENERGY
 		&& bin != noone
+		&& bin.energy > 0
 		&& bin.bbox_left < x - sprite_width / 2
 		&& bin.bbox_right > x + sprite_width / 2
 		&& bin.bbox_top < y - sprite_height / 2
