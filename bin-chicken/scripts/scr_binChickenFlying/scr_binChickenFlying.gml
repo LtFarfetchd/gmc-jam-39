@@ -21,6 +21,16 @@ function scr_binChickenFlying() {
 			vSpeed += dsin(trajectory) * FLAP_SPEED_BOOST;
 			hSpeed += dcos(trajectory) * abs(FLAP_SPEED_BOOST);
 			timeSinceLastFlap = 0;
+			
+			// handle sfx
+			audio_play_sound(
+				scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.flap))
+				, 50, false
+			);
+			audio_play_sound(
+				scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.honk))
+				, 50, false
+			);
 		}
 		
 		var rotationChange = ROTATION_SPEED / sps *

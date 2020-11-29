@@ -29,6 +29,7 @@
     {"id":{"name":"obj_binVariationTwo","path":"objects/obj_binVariationTwo/obj_binVariationTwo.yy",},"order":5,},
     {"id":{"name":"spr_trashDust","path":"sprites/spr_trashDust/spr_trashDust.yy",},"order":20,},
     {"id":{"name":"sfx_IbisCall_2","path":"sounds/sfx_IbisCall_2/sfx_IbisCall_2.yy",},"order":1,},
+    {"id":{"name":"scr_arrayChoose","path":"scripts/scr_arrayChoose/scr_arrayChoose.yy",},"order":2,},
     {"id":{"name":"sfx_IbisHonk_2","path":"sounds/sfx_IbisHonk_2/sfx_IbisHonk_2.yy",},"order":1,},
     {"id":{"name":"obj_binChicken","path":"objects/obj_binChicken/obj_binChicken.yy",},"order":0,},
     {"id":{"name":"sfx_Flap_2","path":"sounds/sfx_Flap_2/sfx_Flap_2.yy",},"order":1,},
