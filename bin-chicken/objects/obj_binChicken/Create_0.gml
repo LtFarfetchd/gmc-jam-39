@@ -21,7 +21,7 @@ STATE_SCRIPTS = scr_build_map(
 	, states.flying, scr_binChickenFlying
 );
 
-global.STARTING_ENERGY = 100;
+global.STARTING_ENERGY = 500;
 
 FLAP_COOLDOWN_TIME = 0.3; // in seconds
 STUN_FLAP_LAG_VALUE = -FLAP_COOLDOWN_TIME; // in seconds, timeSinceLastFlap is set to this on stun
@@ -33,6 +33,7 @@ STUN_SPEED = 350; // in pixels per second
 LANDING_ANGLE_MARGIN = 45; // degrees either direction from upright within which the bicken can land
 ENERGY_DEPLETION_RATE = 5; // per second while in flight
 HUD = instance_find(obj_hud, 0);
+TRASH_SPAWN_RATE = 3; // number of trash particles per second
 
 state = states.standing;
 previousState = states.standing;
@@ -42,3 +43,6 @@ vSpeed = 0;
 facingDirection = 0;
 timeSinceLastFlap = 0; // in seconds
 energy = global.STARTING_ENERGY;
+binInside = noone; // current bin the bicken is in
+consumptionRate = 10; // energy gain per second
+trashSpawnTimer = 0;

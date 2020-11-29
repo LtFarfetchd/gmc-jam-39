@@ -78,13 +78,15 @@ function scr_binChickenFlying() {
 			if (abs(vSpeed) < STUN_SPEED
 				&& (facingDirection < LANDING_ANGLE_MARGIN
 				|| facingDirection > 360 - LANDING_ANGLE_MARGIN)) 
-			{ // transition to standing 
+			{ // transition to standing if not dead
 				vSpeed = 0;
 				yChange = 0;
 				hSpeed = 0;
-				facingDirection = 0;
 				timeSinceLastFlap = 0;
-				nextState = (state == states.dead) ? states.dead : states.standing;
+				if (state != states.dead) {
+					nextState = states.standing;
+					facingDirection = 0;
+				}
 			}
 			else {
 				// bounce
