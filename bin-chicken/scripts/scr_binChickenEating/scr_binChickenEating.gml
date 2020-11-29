@@ -11,6 +11,10 @@ function scr_binChickenEating(){
 	binInside.energy -= energyChange;
 	energy += energyChange;
 	
+	if (irandom(sps) <= 3) {// ~ three trash / second
+		instance_create_layer(x, y, layer, obj_trash);
+	}
+	
 	// handle state transition testing
 	if (energyChange <= 0) {
 		nextState = states.standing;
