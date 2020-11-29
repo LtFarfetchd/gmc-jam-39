@@ -50,10 +50,12 @@ GRAVITY = 15; // in pixels per second
 ROTATION_SPEED = 135; // in degrees per second;
 DEATH_SPEED = 600; // in pixels per second
 STUN_SPEED = 350; // in pixels per second
+HIT_SPEED = 100; // in pixels per second, speed at which the hit effect plays
 LANDING_ANGLE_MARGIN = 45; // degrees either direction from upright within which the bicken can land
 ENERGY_DEPLETION_RATE = 5; // per second while in flight
 HUD = instance_find(obj_hud, 0);
 TRASH_SPAWN_RATE = 3; // number of trash particles per second
+SFX_PRIORITY = 50;
 
 state = states.standing;
 previousState = states.standing;

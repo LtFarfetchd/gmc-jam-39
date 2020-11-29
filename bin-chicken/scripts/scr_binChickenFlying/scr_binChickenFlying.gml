@@ -25,11 +25,11 @@ function scr_binChickenFlying() {
 			// handle sfx
 			audio_play_sound(
 				scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.flap))
-				, 50, false
+				, SFX_PRIORITY, false
 			);
 			audio_play_sound(
 				scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.honk))
-				, 50, false
+				, SFX_PRIORITY, false
 			);
 		}
 		
@@ -62,7 +62,14 @@ function scr_binChickenFlying() {
 			}
 			audio_play_sound(
 				scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.scream))
-				, 50, false
+				, SFX_PRIORITY, false
+			);
+		}
+		if (abs(vSpeed) > HIT_SPEED)
+		{
+			audio_play_sound(
+				scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.hit))
+				, SFX_PRIORITY, false
 			);
 		}
 	}
@@ -88,7 +95,7 @@ function scr_binChickenFlying() {
 				}
 				audio_play_sound(
 					scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.scream))
-					, 50, false
+					, SFX_PRIORITY, false
 				);
 			}
 		}
@@ -124,10 +131,17 @@ function scr_binChickenFlying() {
 					}
 					audio_play_sound(
 						scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.scream))
-						, 50, false
+						, SFX_PRIORITY, false
 					);
 				}
 			}
+		}
+		if (abs(vSpeed) > HIT_SPEED)
+		{
+			audio_play_sound(
+				scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.hit))
+				, SFX_PRIORITY, false
+			);
 		}
 	}
 	
