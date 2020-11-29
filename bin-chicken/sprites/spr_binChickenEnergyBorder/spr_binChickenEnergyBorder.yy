@@ -2,20 +2,20 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 0,
+  "origin": 9,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 201,
+  "bbox_right": 532,
   "bbox_top": 0,
-  "bbox_bottom": 65,
+  "bbox_bottom": 275,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 202,
-  "height": 66,
+  "width": 538,
+  "height": 282,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8304047a-3a88-4f10-b1d9-ef5fc775aff1","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8304047a-3a88-4f10-b1d9-ef5fc775aff1","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},"LayerId":{"name":"f070be0a-8463-4914-a8b1-7f39fef27e10","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_binChickenEnergyBorder","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},"resourceVersion":"1.0","name":"8304047a-3a88-4f10-b1d9-ef5fc775aff1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"2f28f3e0-88e1-42cc-80a7-14dd48af4d23","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"2f28f3e0-88e1-42cc-80a7-14dd48af4d23","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},"LayerId":{"name":"6d66a684-661a-40f3-b765-b6020deb3845","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_binChickenEnergyBorder","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},"resourceVersion":"1.0","name":"2f28f3e0-88e1-42cc-80a7-14dd48af4d23","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_binChickenEnergyBorder","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"86f6a6cd-b137-4be2-873e-0ec20ca21220","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8304047a-3a88-4f10-b1d9-ef5fc775aff1","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bf473f40-f134-45fa-a959-9e6f078e6ec3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2f28f3e0-88e1-42cc-80a7-14dd48af4d23","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 127,
+    "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_binChickenEnergyBorder","path":"sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f070be0a-8463-4914-a8b1-7f39fef27e10","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6d66a684-661a-40f3-b765-b6020deb3845","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Sprites",
