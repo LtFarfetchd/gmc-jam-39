@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 0,
+  "bbox_right": 95,
   "bbox_top": 0,
-  "bbox_bottom": 0,
+  "bbox_bottom": 127,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 64,
-  "height": 64,
+  "width": 96,
+  "height": 128,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"165c3e77-7cd3-412c-89b6-fc4647d6a908","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"165c3e77-7cd3-412c-89b6-fc4647d6a908","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},"LayerId":{"name":"d7161c32-a62f-49f9-95e4-4a1e6a49a3f9","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_binVariationOne","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},"resourceVersion":"1.0","name":"165c3e77-7cd3-412c-89b6-fc4647d6a908","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ab8882da-7876-45a1-a42d-74782a91b0cb","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ab8882da-7876-45a1-a42d-74782a91b0cb","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},"LayerId":{"name":"42d1f87d-d65e-4ad4-9542-cdb02b7478ba","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_binVariationOne","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},"resourceVersion":"1.0","name":"ab8882da-7876-45a1-a42d-74782a91b0cb","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_binVariationOne","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"991f2a87-7957-4580-aafc-f6c6c8bc535d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"165c3e77-7cd3-412c-89b6-fc4647d6a908","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bd30b1ca-8e9f-4545-b02f-39b0518f9365","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ab8882da-7876-45a1-a42d-74782a91b0cb","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d7161c32-a62f-49f9-95e4-4a1e6a49a3f9","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"42d1f87d-d65e-4ad4-9542-cdb02b7478ba","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Sprites",

@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_binVariationOne",
+    "path": "sprites/spr_binVariationOne/spr_binVariationOne.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

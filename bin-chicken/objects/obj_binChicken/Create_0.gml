@@ -21,7 +21,7 @@ STATE_SCRIPTS = scr_build_map(
 	, states.flying, scr_binChickenFlying
 );
 
-global.STARTING_ENERGY = 100;
+global.STARTING_ENERGY = 1000;
 
 FLAP_COOLDOWN_TIME = 0.3; // in seconds
 STUN_FLAP_LAG_VALUE = -FLAP_COOLDOWN_TIME; // in seconds, timeSinceLastFlap is set to this on stun
