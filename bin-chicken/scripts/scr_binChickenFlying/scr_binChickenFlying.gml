@@ -11,12 +11,19 @@ function scr_binChickenFlying() {
 	vSpeed += GRAVITY;
 	timeSinceLastFlap += 1 / sps;
 	
-	if (state != states.dead 
-		&& keyboard_check_pressed(vk_space)
-		&& timeSinceLastFlap >= FLAP_COOLDOWN_TIME) 
-	{
-		vSpeed += FLAP_SPEED_BOOST;	
-		timeSinceLastFlap = 0;
+	if (state != states.dead) {
+		if (keyboard_check_pressed(vk_space)
+			&& timeSinceLastFlap >= FLAP_COOLDOWN_TIME) 
+		{
+			var trajectory = (facingDirection + 90) % 360;
+
+			vSpeed += dsin(trajectory) * FLAP_SPEED_BOOST;	
+			hSpeed += dcos(trajectory) * FLAP_SPEED_BOOST;
+			timeSinceLastFlap = 0;
+		}
+		
+		var rotationChange = ROTATION_SPEED / sps *
+			(keyboard_check(vk_left) - keyboard_check(vk_right));
 	}
 	
 	var xChange = hSpeed / sps;
@@ -88,4 +95,5 @@ function scr_binChickenFlying() {
 	// final movement
 	x += xChange;
 	y += yChange;
+	facingDirection = (facingDirection + rotationChange) % 360;
 }
