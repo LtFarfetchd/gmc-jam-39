@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_binChickenDie",
+    "path": "sprites/spr_binChickenDie/spr_binChickenDie.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
