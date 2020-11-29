@@ -19,7 +19,6 @@
     {"id":{"name":"spr_homeBase","path":"sprites/spr_homeBase/spr_homeBase.yy",},"order":21,},
     {"id":{"name":"scr_binSpawn","path":"scripts/scr_binSpawn/scr_binSpawn.yy",},"order":0,},
     {"id":{"name":"obj_trash","path":"objects/obj_trash/obj_trash.yy",},"order":11,},
-    {"id":{"name":"Sprite22","path":"sprites/Sprite22/Sprite22.yy",},"order":21,},
     {"id":{"name":"obj_binVariationTwo","path":"objects/obj_binVariationTwo/obj_binVariationTwo.yy",},"order":5,},
     {"id":{"name":"spr_trashDust","path":"sprites/spr_trashDust/spr_trashDust.yy",},"order":20,},
     {"id":{"name":"obj_binChicken","path":"objects/obj_binChicken/obj_binChicken.yy",},"order":0,},
