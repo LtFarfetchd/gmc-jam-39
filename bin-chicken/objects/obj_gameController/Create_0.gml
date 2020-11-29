@@ -2,14 +2,15 @@
 // You can write your code in this editor
 randomize();
 
+homeBaseWidth = sprite_get_width(spr_homeBase)  + 64;
+
 createNextBuilding = true;
-nextBuildingX = 0;
+nextBuildingX = homeBaseWidth;
 buidingWidth = sprite_get_width(spr_building);
 
-nextBinX = 0;
+nextBinX = homeBaseWidth;
 createNextBin = true;
 binWidth = sprite_get_width(spr_binVariationTwo);
-
 
 while (createNextBuilding == true)
 {
