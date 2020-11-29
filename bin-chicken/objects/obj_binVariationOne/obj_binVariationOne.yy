@@ -4,7 +4,7 @@
     "path": "sprites/spr_binVariationOne/spr_binVariationOne.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
