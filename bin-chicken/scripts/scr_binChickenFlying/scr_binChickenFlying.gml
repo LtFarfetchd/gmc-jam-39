@@ -11,8 +11,8 @@ function scr_binChickenFlying() {
 	vSpeed += GRAVITY;
 	timeSinceLastFlap += 1 / sps;
 	
-	// handle input
 	if (state != states.dead) {
+		// handle input
 		if (keyboard_check_pressed(vk_space)
 			&& timeSinceLastFlap >= FLAP_COOLDOWN_TIME) 
 		{
@@ -25,6 +25,9 @@ function scr_binChickenFlying() {
 		
 		var rotationChange = ROTATION_SPEED / sps *
 			(keyboard_check(vk_left) - keyboard_check(vk_right));
+		
+		// handle energy depletion
+		energy = max(0, energy - ENERGY_DEPLETION_RATE / sps);
 	}
 	
 	var xChange = hSpeed / sps;
@@ -48,7 +51,8 @@ function scr_binChickenFlying() {
 		}
 	}
 	
-	// vertical bouncing off objects and transition handling
+	// vertical bouncing off objects and transition handling 
+	// TODO: merge common code
 	if (place_meeting(x, y + yChange, obj_wall)) {
 		if (yChange < 0) {
 			while (!place_meeting(x, y, obj_wall)) {

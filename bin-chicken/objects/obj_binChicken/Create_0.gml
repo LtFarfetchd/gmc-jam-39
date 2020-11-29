@@ -21,13 +21,8 @@ STATE_SCRIPTS = scr_build_map(
 	, states.flying, scr_binChickenFlying
 );
 
-state = states.standing;
-previousState = states.standing;
-nextState = undefined;
-hSpeed = 0;
-vSpeed = 0;
-facingDirection = 0;
-timeSinceLastFlap = 0; // in seconds
+global.STARTING_ENERGY = 100;
+
 FLAP_COOLDOWN_TIME = 0.3; // in seconds
 STUN_FLAP_LAG_VALUE = -FLAP_COOLDOWN_TIME; // in seconds, timeSinceLastFlap is set to this on stun
 FLAP_SPEED_BOOST = -500; // in pixels per second
@@ -36,3 +31,14 @@ ROTATION_SPEED = 135; // in degrees per second;
 DEATH_SPEED = 600; // in pixels per second
 STUN_SPEED = 350; // in pixels per second
 LANDING_ANGLE_MARGIN = 45; // degrees either direction from upright within which the bicken can land
+ENERGY_DEPLETION_RATE = 5; // per second while in flight
+HUD = instance_find(obj_hud, 0);
+
+state = states.standing;
+previousState = states.standing;
+nextState = undefined;
+hSpeed = 0;
+vSpeed = 0;
+facingDirection = 0;
+timeSinceLastFlap = 0; // in seconds
+energy = global.STARTING_ENERGY;

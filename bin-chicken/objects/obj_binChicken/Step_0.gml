@@ -2,6 +2,9 @@
 // handle state actions
 script_execute(ds_map_find_value(STATE_SCRIPTS, state))
 
+// handle energy reporting
+HUD.energy = energy;
+
 if (previousState != state) {
 	// happens before transitions and after state execution in the following step	
 	previousState = state; 
