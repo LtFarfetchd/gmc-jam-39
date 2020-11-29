@@ -30,7 +30,6 @@ function scr_binChickenFlying() {
 	var xChange = hSpeed / sps;
 	var yChange = vSpeed / sps;
 	
-	// TODO: genuine death computation and making transition to standing conditional upon angle
 	// horizontal bouncing off borders and transition handling
 	if (place_meeting(x + xChange, y, obj_wall)) {
 		while (!place_meeting(x + sign(xChange), y, obj_wall)) {
@@ -40,11 +39,11 @@ function scr_binChickenFlying() {
 		// bounce
 		hSpeed = -hSpeed / 2;
 		xChange = -xChange / 2;
-		if (abs(hSpeed) > DEATH_SPEED) { // die
+		if (abs(hSpeed) >= DEATH_SPEED) { // die
 			timeSinceLastFlap = 0;
 			nextState = states.dead;
 		}
-		else if (abs(hSpeed) > STUN_SPEED) { // stun
+		else if (abs(hSpeed) >= STUN_SPEED) { // stun
 			timeSinceLastFlap = STUN_FLAP_LAG_VALUE;	
 		}
 	}
@@ -59,11 +58,11 @@ function scr_binChickenFlying() {
 			// bounce
 			vSpeed = -vSpeed / 2;
 			yChange = -yChange / 2;	
-			if (abs(vSpeed) > DEATH_SPEED) { // die
+			if (abs(vSpeed) >= DEATH_SPEED) { // die
 				timeSinceLastFlap = 0;
 				nextState = states.dead;
 			}
-			else if (abs(vSpeed) > STUN_SPEED) { // stun
+			else if (abs(vSpeed) >= STUN_SPEED) { // stun
 				timeSinceLastFlap = STUN_FLAP_LAG_VALUE;	
 			}
 		}
@@ -72,7 +71,10 @@ function scr_binChickenFlying() {
 				x += sign(xChange);
 				y++;	
 			}	
-			if (abs(vSpeed) < STUN_SPEED) { // transition to standing TODO: test angle in this condition
+			if (abs(vSpeed) < STUN_SPEED
+				&& (facingDirection < LANDING_ANGLE_MARGIN
+				|| facingDirection > 360 - LANDING_ANGLE_MARGIN)) 
+			{ // transition to standing 
 				vSpeed = 0;
 				yChange = 0;
 				hSpeed = 0;
@@ -84,12 +86,12 @@ function scr_binChickenFlying() {
 				// bounce
 				vSpeed = -vSpeed / 2;
 				yChange = -yChange / 2;
-				if (abs(vSpeed) < DEATH_SPEED) { // stun
-					timeSinceLastFlap = STUN_FLAP_LAG_VALUE;
-				}
-				else { // die
+				if (abs(vSpeed) >= DEATH_SPEED) { // die
 					timeSinceLastFlap = 0;
 					nextState = states.dead;
+				}
+				else if (abs(vSpeed) >= STUN_SPEED) { // stun
+					timeSinceLastFlap = STUN_FLAP_LAG_VALUE;
 				}
 			}
 		}
