@@ -61,10 +61,10 @@
     "name": "Default",
     "children": [],
   },
-  "RoomOrder": [
-    {"name":"rm_noah","path":"rooms/rm_noah/rm_noah.yy",},
-    {"name":"rm_adam","path":"rooms/rm_adam/rm_adam.yy",},
-    {"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},
+  "RoomOrderNodes": [
+    {"roomId":{"name":"rm_noah","path":"rooms/rm_noah/rm_noah.yy",},},
+    {"roomId":{"name":"rm_adam","path":"rooms/rm_adam/rm_adam.yy",},},
+    {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -88,13 +88,13 @@
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
-    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.0.529",
+    "IDEVersion": "2.3.1.536",
   },
-  "resourceVersion": "1.3",
+  "resourceVersion": "1.4",
   "name": "bin-chicken",
   "tags": [],
   "resourceType": "GMProject",
