@@ -5,11 +5,18 @@ function scr_binChickenStanding(){
 	// handle state behaviour
 	
 	// handle state transition testing
-	if (keyboard_check_pressed(vk_space)) {
-		nextState = states.flying;
+	var bin = instance_place(x, y, obj_bin);
+	if (energy < global.STARTING_ENERGY
+		&& bin != noone
+		&& bin.bbox_left < x - sprite_width / 2
+		&& bin.bbox_right > x + sprite_width / 2
+		&& bin.bbox_top < y - sprite_height / 2
+		&& bin.bbox_bottom > y + sprite_height / 2) 
+	{
+		nextState = states.eating;	
+		binInside = bin;
 	}
-	else if (keyboard_check_pressed(vk_down)) {
-		// TODO: perform a test for whether you're in a bin
-		nextState = states.eating;
+	else if (keyboard_check_pressed(vk_space)) {
+		nextState = states.flying;
 	}
 }

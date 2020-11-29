@@ -1,11 +1,19 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_binChickenEating(){
 	
 	// handle state behaviour
+	var sps = game_get_speed(gamespeed_fps); // steps per second
+	var energyChange = min(
+		consumptionRate / sps // if the normal amount can be consumed
+		, global.STARTING_ENERGY - energy // if the limiting factor is energy maximum
+		, binInside.energy // if the limiting factor is bin's remaining energy
+	);
+	
+	binInside.energy -= energyChange;
+	energy += energyChange;
 	
 	// handle state transition testing
-	if (keyboard_check_released(vk_down)) {
+	if (energyChange <= 0) {
 		nextState = states.standing;
+		binInside = noone;
 	}
 }

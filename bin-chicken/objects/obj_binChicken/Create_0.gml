@@ -21,7 +21,7 @@ STATE_SCRIPTS = scr_build_map(
 	, states.flying, scr_binChickenFlying
 );
 
-global.STARTING_ENERGY = 1000;
+global.STARTING_ENERGY = 500;
 
 FLAP_COOLDOWN_TIME = 0.3; // in seconds
 STUN_FLAP_LAG_VALUE = -FLAP_COOLDOWN_TIME; // in seconds, timeSinceLastFlap is set to this on stun
@@ -42,3 +42,5 @@ vSpeed = 0;
 facingDirection = 0;
 timeSinceLastFlap = 0; // in seconds
 energy = global.STARTING_ENERGY;
+binInside = noone; // current bin the bicken is in
+consumptionRate = 10; // energy gain per second
