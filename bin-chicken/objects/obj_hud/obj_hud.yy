@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_binChickenEnergyIcon",
-    "path": "sprites/spr_binChickenEnergyIcon/spr_binChickenEnergyIcon.yy",
+    "name": "spr_binChickenEnergyBorder",
+    "path": "sprites/spr_binChickenEnergyBorder/spr_binChickenEnergyBorder.yy",
   },
   "solid": false,
   "visible": true,
