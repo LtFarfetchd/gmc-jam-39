@@ -56,6 +56,7 @@ ENERGY_DEPLETION_RATE = 5; // per second while in flight
 HUD = instance_find(obj_hud, 0);
 TRASH_SPAWN_RATE = 3; // number of trash particles per second
 SFX_PRIORITY = 50;
+CALL_PROBABILITY = 5; // how many seconds are expected between calls when stationary
 
 state = states.standing;
 previousState = states.standing;
@@ -72,3 +73,5 @@ trashSpawnTimer = 0;
 // handle music
 audio_play_sound(mus_Atmos_LOOP, 99, true);
 audio_play_sound(mus_MOTBC_LOOP, 100, true);
+
+randomize();

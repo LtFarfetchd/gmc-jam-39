@@ -3,6 +3,13 @@
 function scr_binChickenStanding(){
 	
 	// handle state behaviour
+	var sps = game_get_speed(gamespeed_fps);
+	if (irandom(CALL_PROBABILITY * sps) <= 0) {
+		audio_play_sound(
+			scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.call))
+			, SFX_PRIORITY, false
+		);
+	}
 	
 	// handle state transition testing
 	var bin = instance_place(x, y, obj_bin);
