@@ -52,12 +52,18 @@ function scr_binChickenFlying() {
 		// bounce
 		hSpeed = -hSpeed / 2;
 		xChange = -xChange / 2;
-		if (abs(hSpeed) >= DEATH_SPEED) { // die
-			timeSinceLastFlap = 0;
-			nextState = states.dead;
-		}
-		else if (abs(hSpeed) >= STUN_SPEED) { // stun
-			timeSinceLastFlap = STUN_FLAP_LAG_VALUE;	
+		if (abs(hSpeed) >= STUN_SPEED) {
+			if (abs(hSpeed) >= DEATH_SPEED) { // die
+				timeSinceLastFlap = 0;
+				nextState = states.dead;
+			}
+			else { // stun
+				timeSinceLastFlap = STUN_FLAP_LAG_VALUE;	
+			}
+			audio_play_sound(
+				scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.scream))
+				, 50, false
+			);
 		}
 	}
 	
@@ -71,13 +77,19 @@ function scr_binChickenFlying() {
 			}
 			// bounce
 			vSpeed = -vSpeed / 2;
-			yChange = -yChange / 2;	
-			if (abs(vSpeed) >= DEATH_SPEED) { // die
-				timeSinceLastFlap = 0;
-				nextState = states.dead;
-			}
-			else if (abs(vSpeed) >= STUN_SPEED) { // stun
-				timeSinceLastFlap = STUN_FLAP_LAG_VALUE;	
+			yChange = -yChange / 2;
+			if (abs(vSpeed) >= STUN_SPEED) {
+				if (abs(vSpeed) >= DEATH_SPEED) { // die
+					timeSinceLastFlap = 0;
+					nextState = states.dead;
+				}
+				else { // stun
+					timeSinceLastFlap = STUN_FLAP_LAG_VALUE;
+				}
+				audio_play_sound(
+					scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.scream))
+					, 50, false
+				);
 			}
 		}
 		else if (yChange > 0) {
@@ -102,12 +114,18 @@ function scr_binChickenFlying() {
 				// bounce
 				vSpeed = -vSpeed / 2;
 				yChange = -yChange / 2;
-				if (abs(vSpeed) >= DEATH_SPEED) { // die
-					timeSinceLastFlap = 0;
-					nextState = states.dead;
-				}
-				else if (abs(vSpeed) >= STUN_SPEED) { // stun
-					timeSinceLastFlap = STUN_FLAP_LAG_VALUE;
+				if (abs(vSpeed) >= STUN_SPEED) {
+					if (abs(vSpeed) >= DEATH_SPEED) { // die
+						timeSinceLastFlap = 0;
+						nextState = states.dead;
+					}
+					else { // stun
+						timeSinceLastFlap = STUN_FLAP_LAG_VALUE;
+					}
+					audio_play_sound(
+						scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.scream))
+						, 50, false
+					);
 				}
 			}
 		}
