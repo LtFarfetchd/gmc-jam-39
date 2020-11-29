@@ -18,8 +18,8 @@ function scr_binChickenFlying() {
 		{
 			var trajectory = (facingDirection + 90) % 360;
 
-			vSpeed += dsin(trajectory) * FLAP_SPEED_BOOST;	
-			hSpeed += dcos(trajectory) * FLAP_SPEED_BOOST;
+			vSpeed += dsin(trajectory) * FLAP_SPEED_BOOST;
+			hSpeed += dcos(trajectory) * abs(FLAP_SPEED_BOOST);
 			timeSinceLastFlap = 0;
 		}
 		
@@ -39,6 +39,7 @@ function scr_binChickenFlying() {
 		}
 		hSpeed = -hSpeed / 2;
 		xChange = -xChange / 2;
+		timeSinceLastFlap = -FLAP_COOLDOWN_TIME; // disable flapping after bounce
 	}
 	
 	// vertical bouncing off objects and transition handling
@@ -80,5 +81,6 @@ function scr_binChickenFlying() {
 	// final movement
 	x += xChange;
 	y += yChange;
-	facingDirection = (facingDirection + rotationChange) % 360;
+	var newDirection = facingDirection + rotationChange;
+	facingDirection = newDirection < 0 ? newDirection + 360 : newDirection % 360;
 }
