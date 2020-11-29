@@ -23,6 +23,7 @@ function scr_binChickenEating(){
 			scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.burp))
 			, SFX_PRIORITY, false
 		);
+		audio_stop_sound(sfx_BinEat_LOOP);
 		nextState = states.standing;
 		binInside = noone;
 		trashSpawnTimer = 0;

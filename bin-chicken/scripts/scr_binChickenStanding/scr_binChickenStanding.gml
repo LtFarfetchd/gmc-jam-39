@@ -25,6 +25,7 @@ function scr_binChickenStanding(){
 			scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.binHit))
 			, SFX_PRIORITY, false
 		);
+		audio_play_sound(sfx_BinEat_LOOP, SFX_PRIORITY, true);
 		nextState = states.eating;	
 		binInside = bin;
 	}
