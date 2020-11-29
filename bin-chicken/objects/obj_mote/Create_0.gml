@@ -1,0 +1,1 @@
+ALPHA_CHANGE = 0.03; // per step
