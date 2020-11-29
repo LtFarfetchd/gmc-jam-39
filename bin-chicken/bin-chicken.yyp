@@ -16,7 +16,7 @@
     {"id":{"name":"spr_binChickenStand","path":"sprites/spr_binChickenStand/spr_binChickenStand.yy",},"order":0,},
     {"id":{"name":"Sprite23","path":"sprites/Sprite23/Sprite23.yy",},"order":22,},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":13,},
-    {"id":{"name":"Object11","path":"objects/Object11/Object11.yy",},"order":10,},
+    {"id":{"name":"obj_testBin","path":"objects/obj_testBin/obj_testBin.yy",},"order":10,},
     {"id":{"name":"Sprite22","path":"sprites/Sprite22/Sprite22.yy",},"order":21,},
     {"id":{"name":"scr_binSpawn","path":"scripts/scr_binSpawn/scr_binSpawn.yy",},"order":0,},
     {"id":{"name":"obj_binVariationTwo","path":"objects/obj_binVariationTwo/obj_binVariationTwo.yy",},"order":5,},

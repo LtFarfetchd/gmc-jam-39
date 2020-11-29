@@ -18,7 +18,7 @@ function scr_binSpawn(){
 			createNextBin = false;
 		}
 		
-		instance_create_layer(nextBinX, room_height - sprite_get_height(spr_binVariationTwo), layer, obj_bin);
+		instance_create_layer(nextBinX, room_height - sprite_get_height(spr_binVariationTwo), layer, obj_testBin);
 		nextBinX += binWidth;
 	}	
 }
