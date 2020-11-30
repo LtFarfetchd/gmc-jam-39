@@ -57,6 +57,7 @@
     {"id":{"name":"spr_binVariationOne","path":"sprites/spr_binVariationOne/spr_binVariationOne.yy",},"order":5,},
     {"id":{"name":"obj_binVariationThree","path":"objects/obj_binVariationThree/obj_binVariationThree.yy",},"order":6,},
     {"id":{"name":"mus_MOTBC_LOOP","path":"sounds/mus_MOTBC_LOOP/mus_MOTBC_LOOP.yy",},"order":10,},
+    {"id":{"name":"spr_win","path":"sprites/spr_win/spr_win.yy",},"order":25,},
     {"id":{"name":"obj_bin","path":"objects/obj_bin/obj_bin.yy",},"order":1,},
     {"id":{"name":"rm_adam","path":"rooms/rm_adam/rm_adam.yy",},"order":1,},
     {"id":{"name":"spr_titleScreen","path":"sprites/spr_titleScreen/spr_titleScreen.yy",},"order":18,},

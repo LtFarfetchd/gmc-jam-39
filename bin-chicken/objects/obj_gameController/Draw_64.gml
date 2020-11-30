@@ -7,7 +7,7 @@ if (titleScreen == true)
 
 if (win == true)
 {
-	draw_sprite(spr_deathScreen, 0, 0, 0);
+	draw_sprite(spr_win, 0, 0, 0);
 }
 else if (dead == true)
 {
