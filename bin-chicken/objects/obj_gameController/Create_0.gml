@@ -1,11 +1,12 @@
-/// @description Insert description here
-// You can write your code in this editor\
+global.SPAWN_OFFSET_FROM_GROUND = 0;
+global.SPAWN_OFFSET_FROM_SIDES = 64;
+
 titleScreen = true;
 dead = false;
 
 randomize();
 
-homeBaseWidth = sprite_get_width(spr_homeBase)  + 64;
+homeBaseWidth = sprite_get_width(spr_homeBase)  + global.SPAWN_OFFSET_FROM_SIDES;
 
 createNextBuilding = true;
 nextBuildingX = homeBaseWidth;
