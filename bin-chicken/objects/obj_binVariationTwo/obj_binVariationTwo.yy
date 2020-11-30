@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_binVariationThree",
+    "path": "sprites/spr_binVariationThree/spr_binVariationThree.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -20,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_binVariationTwo","path":"objects/obj_binVariationTwo/obj_binVariationTwo.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
