@@ -91,8 +91,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_noah","path":"rooms/rm_noah/rm_noah.yy",},},
     {"roomId":{"name":"rm_adam","path":"rooms/rm_adam/rm_adam.yy",},},
+    {"roomId":{"name":"rm_noah","path":"rooms/rm_noah/rm_noah.yy",},},
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "Folders": [

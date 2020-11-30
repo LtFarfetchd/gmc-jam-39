@@ -4,6 +4,11 @@ image_yscale = 0.15;
 
 image_speed = 0;
 
+// spawning
+var homeBase = instance_find(obj_homeBase, 0);
+x = homeBase.x;
+y += homeBase.y - bbox_bottom;
+
 enum states {
 	standing,
 	eating,
@@ -76,7 +81,7 @@ facingDirection = 0;
 timeSinceLastFlap = 0; // in seconds
 energy = global.STARTING_ENERGY;
 binInside = noone; // current bin the bicken is in
-consumptionRate = 10; // energy gain per second
+consumptionRate = 20; // energy gain per second
 trashSpawnTimer = 0;
 
 // handle music

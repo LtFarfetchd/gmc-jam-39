@@ -1,17 +1,19 @@
-/// @description Insert description here
-// You can write your code in this editor\
+global.SPAWN_OFFSET_FROM_GROUND = 0;
+global.SPAWN_OFFSET_FROM_SIDES = 64;
+
 titleScreen = true;
 dead = false;
 
 randomize();
 
-homeBaseWidth = sprite_get_width(spr_homeBase)  + 64;
+var homeBase = instance_find(obj_homeBase, 0);
+var homeBaseRightSide = homeBase.x + sprite_get_width(spr_homeBase) / 2;
 
 createNextBuilding = true;
-nextBuildingX = homeBaseWidth;
+nextBuildingX = homeBaseRightSide;
 buidingWidth = sprite_get_width(spr_building);
 
-nextBinX = homeBaseWidth;
+nextBinX = homeBaseRightSide;
 createNextBin = true;
 binWidth = sprite_get_width(spr_binVariationTwo);
 
