@@ -1,5 +1,8 @@
 /// @description Insert description here
-// You can write your code in this editor
+// You can write your code in this editor\
+titleScreen = true;
+dead = false;
+
 randomize();
 
 homeBaseWidth = sprite_get_width(spr_homeBase)  + 64;
