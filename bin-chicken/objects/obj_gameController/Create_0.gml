@@ -18,7 +18,7 @@ buidingWidth = sprite_get_width(spr_building);
 
 nextBinX = homeBaseRightSide;
 createNextBin = true;
-binWidth = sprite_get_width(spr_binVariationTwo);
+binWidth = sprite_get_width(spr_binVariationThree);
 
 while (createNextBuilding == true)
 {
