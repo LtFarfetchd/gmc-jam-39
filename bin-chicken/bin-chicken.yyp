@@ -62,6 +62,7 @@
     {"id":{"name":"spr_binChickenEat","path":"sprites/spr_binChickenEat/spr_binChickenEat.yy",},"order":3,},
     {"id":{"name":"spr_binChickenFly","path":"sprites/spr_binChickenFly/spr_binChickenFly.yy",},"order":1,},
     {"id":{"name":"scr_build_map","path":"scripts/scr_build_map/scr_build_map.yy",},"order":0,},
+    {"id":{"name":"spr_page","path":"sprites/spr_page/spr_page.yy",},"order":23,},
     {"id":{"name":"scr_binChickenStanding","path":"scripts/scr_binChickenStanding/scr_binChickenStanding.yy",},"order":3,},
     {"id":{"name":"scr_buildSpawn","path":"scripts/scr_buildSpawn/scr_buildSpawn.yy",},"order":0,},
     {"id":{"name":"scr_array","path":"scripts/scr_array/scr_array.yy",},"order":1,},
