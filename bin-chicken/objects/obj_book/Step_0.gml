@@ -1,6 +1,5 @@
 
 var sps = game_get_speed(gamespeed_fps);
-vSpeed += GRAVITY / sps;
 
 if (place_meeting(x, y, obj_binChicken)) {
 	// destroy self and spawn pages
@@ -16,5 +15,6 @@ if (place_meeting(x, y, obj_binChicken)) {
 	}
 }
 
+vSpeed += GRAVITY / sps;
 x += hSpeed;
-y += vSpeed;
+y += vSpeed
