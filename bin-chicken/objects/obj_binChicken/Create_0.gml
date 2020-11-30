@@ -53,6 +53,7 @@ SOUND_EFFECTS = scr_build_map(
 );
 
 global.STARTING_ENERGY = 500;
+global.STARTING_HP = 500;
 
 FLAP_COOLDOWN_TIME = 0.3; // in seconds
 STUN_FLAP_LAG_VALUE = -FLAP_COOLDOWN_TIME; // in seconds, timeSinceLastFlap is set to this on stun
@@ -71,6 +72,7 @@ CALL_PROBABILITY = 5; // how many seconds are expected between calls when statio
 FLAP_FRAME = 1;
 NON_FLAP_FRAME = 0;
 FLAP_TIME = FLAP_COOLDOWN_TIME / 3;
+BOOK_DAMAGE = 25; // damage dealt per book
 
 state = states.standing;
 previousState = states.standing;
@@ -80,6 +82,7 @@ vSpeed = 0;
 facingDirection = 0;
 timeSinceLastFlap = 0; // in seconds
 energy = global.STARTING_ENERGY;
+hp = global.STARTING_HP
 binInside = noone; // current bin the bicken is in
 consumptionRate = 20; // energy gain per second
 trashSpawnTimer = 0;
