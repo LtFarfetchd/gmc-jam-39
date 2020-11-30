@@ -56,6 +56,7 @@
     {"id":{"name":"mus_MOTBC_LOOP","path":"sounds/mus_MOTBC_LOOP/mus_MOTBC_LOOP.yy",},"order":10,},
     {"id":{"name":"obj_bin","path":"objects/obj_bin/obj_bin.yy",},"order":1,},
     {"id":{"name":"rm_adam","path":"rooms/rm_adam/rm_adam.yy",},"order":1,},
+    {"id":{"name":"Sprite24","path":"sprites/Sprite24/Sprite24.yy",},"order":15,},
     {"id":{"name":"spr_titleScreen","path":"sprites/spr_titleScreen/spr_titleScreen.yy",},"order":18,},
     {"id":{"name":"spr_cloud","path":"sprites/spr_cloud/spr_cloud.yy",},"order":12,},
     {"id":{"name":"spr_binChickenEat","path":"sprites/spr_binChickenEat/spr_binChickenEat.yy",},"order":3,},
@@ -90,8 +91,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_adam","path":"rooms/rm_adam/rm_adam.yy",},},
     {"roomId":{"name":"rm_noah","path":"rooms/rm_noah/rm_noah.yy",},},
+    {"roomId":{"name":"rm_adam","path":"rooms/rm_adam/rm_adam.yy",},},
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
   ],
   "Folders": [
