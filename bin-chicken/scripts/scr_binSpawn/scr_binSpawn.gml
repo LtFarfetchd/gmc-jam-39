@@ -18,7 +18,8 @@ function scr_binSpawn(){
 			createNextBin = false;
 		}
 		
-		instance_create_layer(nextBinX, room_height - sprite_get_height(spr_binVariationTwo) - 64, layer, obj_testBin);
+		// TODO: spawn retaining walls
+		instance_create_layer(nextBinX, room_height - sprite_get_height(spr_binVariationTwo) - 64, layer_get_id("lay_bins"), choose(obj_binVariationOne, obj_binVariationTwo));
 		nextBinX += binWidth;
 	}	
 }

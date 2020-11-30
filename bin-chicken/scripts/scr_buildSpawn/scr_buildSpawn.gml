@@ -21,7 +21,7 @@ function scr_buildSpawn(){
 		var isTree = irandom(1);
 		if (isTree == 0)
 		{
-			instance_create_layer(nextBuildingX, room_height - sprite_get_height(spr_building) - 64, layer, obj_building);
+			instance_create_layer(nextBuildingX, room_height - sprite_get_height(spr_building) - 64, layer_get_id("lay_environment"), obj_building);
 			nextBuildingX += buidingWidth;
 		}
 		else

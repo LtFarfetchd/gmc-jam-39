@@ -76,7 +76,7 @@ facingDirection = 0;
 timeSinceLastFlap = 0; // in seconds
 energy = global.STARTING_ENERGY;
 binInside = noone; // current bin the bicken is in
-consumptionRate = 10; // energy gain per second
+consumptionRate = 20; // energy gain per second
 trashSpawnTimer = 0;
 
 // handle music

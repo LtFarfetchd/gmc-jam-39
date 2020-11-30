@@ -25,6 +25,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":89.84397,"scaleX":1.70365322,"scaleY":7.41928053,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2605.43579,"y":2699.47852,"resourceVersion":"1.0","name":"inst_2AD5A98F","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.3661787,"scaleY":5.28124952,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2582.0,"y":2362.0,"resourceVersion":"1.0","name":"inst_9CBFAC8","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.3818007,"scaleY":5.28124952,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3079.565,"y":2362.02124,"resourceVersion":"1.0","name":"inst_8D04944","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_gameController","path":"objects/obj_gameController/obj_gameController.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":18.5,"scaleY":18.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":2400.0,"resourceVersion":"1.0","name":"inst_6B0978D9","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"lay_bins","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_binChicken","path":"objects/obj_binChicken/obj_binChicken.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2240.0,"y":1184.0,"resourceVersion":"1.0","name":"inst_6ED9F5C5","tags":[],"resourceType":"GMRInstance",},
@@ -56,6 +57,7 @@
     {"name":"inst_20EFBCFA","path":"rooms/rm_adam/rm_adam.yy",},
     {"name":"inst_CA7A926","path":"rooms/rm_adam/rm_adam.yy",},
     {"name":"inst_3669B1F9","path":"rooms/rm_adam/rm_adam.yy",},
+    {"name":"inst_6B0978D9","path":"rooms/rm_adam/rm_adam.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
