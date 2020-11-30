@@ -4,6 +4,11 @@ image_yscale = 0.15;
 
 image_speed = 0;
 
+// spawning
+var homeBase = instance_find(obj_homeBase, 0);
+x = homeBase.x;
+y = homeBase.y - sprite_get_height(sprite_index) - sprite_get_yoffset(sprite_index);
+
 enum states {
 	standing,
 	eating,

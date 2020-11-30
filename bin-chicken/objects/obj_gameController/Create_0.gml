@@ -6,13 +6,14 @@ dead = false;
 
 randomize();
 
-homeBaseWidth = sprite_get_width(spr_homeBase)  + global.SPAWN_OFFSET_FROM_SIDES;
+var homeBase = instance_find(obj_homeBase, 0);
+var homeBaseRightSide = homeBase.x + sprite_get_width(spr_homeBase) / 2;
 
 createNextBuilding = true;
-nextBuildingX = homeBaseWidth;
+nextBuildingX = homeBaseRightSide;
 buidingWidth = sprite_get_width(spr_building);
 
-nextBinX = homeBaseWidth;
+nextBinX = homeBaseRightSide;
 createNextBin = true;
 binWidth = sprite_get_width(spr_binVariationTwo);
 
