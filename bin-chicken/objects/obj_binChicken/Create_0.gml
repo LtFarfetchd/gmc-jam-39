@@ -1,3 +1,9 @@
+// TEMPORARY ADJUSTMENTS
+image_xscale = 0.15;
+image_yscale = 0.15;
+
+image_speed = 0;
+
 enum states {
 	standing,
 	eating,
