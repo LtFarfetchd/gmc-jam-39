@@ -19,6 +19,8 @@ var aimingPointY = bicken.y
 // derive a h and vspeed from aiming point vector and throw time
 hSpeed = (aimingPointX - x) / (THROW_TIME * sps); // pixels per step
 vSpeed = (aimingPointY - y) / (THROW_TIME * sps); // pixels per step
+
+hasCollidedWithBin = false;
 	
 ROTATION = sign(hSpeed) * 10;
 	
