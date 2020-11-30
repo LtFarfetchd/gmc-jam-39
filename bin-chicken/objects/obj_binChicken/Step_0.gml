@@ -1,4 +1,9 @@
 
+// handle game exiting
+if (keyboard_check_pressed(vk_escape)) {
+	game_end();	
+}
+
 // handle state actions
 script_execute(ds_map_find_value(STATE_SCRIPTS, state))
 
