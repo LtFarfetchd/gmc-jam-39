@@ -19,7 +19,8 @@ function scr_binSpawn(){
 		}
 		
 		// TODO: spawn retaining walls
-		instance_create_layer(nextBinX, room_height - sprite_get_height(spr_binVariationTwo) - global.SPAWN_OFFSET_FROM_GROUND, layer_get_id("lay_bins"), choose(obj_binVariationOne, obj_binVariationTwo));
+		var newBin = instance_create_layer(nextBinX, room_height - sprite_get_height(spr_binVariationTwo) - global.SPAWN_OFFSET_FROM_GROUND, layer_get_id("lay_bins"), choose(obj_binVariationOne, obj_binVariationTwo));
+		ds_list_add(binsList, newBin);
 		nextBinX += binWidth;
 	}	
 }
