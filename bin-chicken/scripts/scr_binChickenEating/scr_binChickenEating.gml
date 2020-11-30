@@ -13,7 +13,7 @@ function scr_binChickenEating(){
 	trashSpawnTimer++;
 	
 	if (trashSpawnTimer >= sps / TRASH_SPAWN_RATE) {// ~ three trash / second
-		instance_create_layer(binInside.x, y, layer, obj_trash);
+		instance_create_layer(binInside.x, binInside.y, layer, obj_trash);
 		trashSpawnTimer = 0;
 	}
 	
