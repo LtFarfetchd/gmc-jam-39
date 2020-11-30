@@ -1,1 +1,3 @@
 energy = 300;
+BORDER_WIDTH = 45;
+LINING_HEIGHT = 144;
