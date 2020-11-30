@@ -63,6 +63,9 @@ HUD = instance_find(obj_hud, 0);
 TRASH_SPAWN_RATE = 3; // number of trash particles per second
 SFX_PRIORITY = 50;
 CALL_PROBABILITY = 5; // how many seconds are expected between calls when stationary
+FLAP_FRAME = 1;
+NON_FLAP_FRAME = 0;
+FLAP_TIME = FLAP_COOLDOWN_TIME / 3;
 
 state = states.standing;
 previousState = states.standing;

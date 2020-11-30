@@ -11,6 +11,11 @@ function scr_binChickenFlying() {
 	vSpeed += GRAVITY;
 	timeSinceLastFlap += 1 / sps;
 	
+	// handle sprite TODO: if less than 0 should be stun sprite
+	if (timeSinceLastFlap > FLAP_TIME || timeSinceLastFlap < 0) {
+		image_index = NON_FLAP_FRAME;	
+	}
+	
 	if (state != states.dead) {
 		// handle input
 		if (keyboard_check_pressed(vk_space)
@@ -31,6 +36,9 @@ function scr_binChickenFlying() {
 				scr_arrayChoose(ds_map_find_value(SOUND_EFFECTS, sfxTypes.honk))
 				, SFX_PRIORITY, false
 			);
+			
+			// handle sprite
+			image_index = FLAP_FRAME;
 		}
 		
 		var rotationChange = ROTATION_SPEED / sps *
