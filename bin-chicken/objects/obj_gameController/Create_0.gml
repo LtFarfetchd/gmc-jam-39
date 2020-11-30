@@ -3,6 +3,9 @@ global.SPAWN_OFFSET_FROM_SIDES = 64;
 
 titleScreen = true;
 dead = false;
+win = false;
+binsList = ds_list_create();
+currenBin = 0;
 
 randomize();
 

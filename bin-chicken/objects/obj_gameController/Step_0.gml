@@ -14,3 +14,15 @@ if (titleScreen == false && dead == true && keyboard_check_pressed(vk_space))
 {
 	room_restart();	
 }
+
+if (ds_list_find_value(binsList, currenBin).energy <= 0 && win == false)
+{
+	if (currenBin >= ds_list_size(binsList) -1)
+	{
+		win = true;
+	}
+	else
+	{
+		currenBin++;
+	}
+}
